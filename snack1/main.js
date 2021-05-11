@@ -36,12 +36,13 @@ for (let i = 0; i < bici.length; i++){
     let biciCiclate = bici[i];
     console.log(biciCiclate.peso);
     if (biciCiclate.peso < 10){
-        biciLeggere.push(biciCiclate.nome);
+        biciLeggere.push(biciCiclate.nome + " ");
     }
 };
 /* const {nomeOne} = biciLeggere;
 console.log(nomeOne); */
 
-const {nome} = biciLeggere;
-console.log(nome);
-/* console.log(`le bici leggere pesano rispettivametne  ${biciLeggere}`); */
+/* const {nome} = biciLeggere;
+console.log(nome); */
+console.log(`le bici leggere sono  ${biciLeggere}`);
+document.getElementById('bici').innerHTML = "le bici leggere sono "  + biciLeggere;
