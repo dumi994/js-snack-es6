@@ -38,7 +38,9 @@ for (let i = 0; i < bici.length; i++){
     if (biciCiclate.peso < 10){
         biciLeggere.push(biciCiclate.nome);
     }
-}
+};
+/* const {nomeOne} = biciLeggere;
+console.log(nomeOne); */
 
 const {nome} = biciLeggere;
 console.log(nome);
