@@ -27,6 +27,16 @@ let bici = [
         peso: 1.5,
     },
 
-]
+];
+console.log(bici);
 
 //Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
+let biciLeggere = [];
+for (let i = 0; i < bici.length; i++){
+    let biciCiclate = bici[i];
+    console.log(biciCiclate.peso);
+    if (biciCiclate.peso < 10){
+        biciLeggere.push(biciCiclate.nome);
+    }
+}
+console.log(`le bici leggere pesano rispettivametne  ${biciLeggere}`);
