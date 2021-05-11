@@ -39,4 +39,7 @@ for (let i = 0; i < bici.length; i++){
         biciLeggere.push(biciCiclate.nome);
     }
 }
-console.log(`le bici leggere pesano rispettivametne  ${biciLeggere}`);
+
+const {nome} = biciLeggere;
+console.log(nome);
+/* console.log(`le bici leggere pesano rispettivametne  ${biciLeggere}`); */
