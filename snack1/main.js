@@ -30,19 +30,25 @@ let bici = [
 ];
 console.log(bici);
 
-//Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
-let biciLeggere = [];
-for (let i = 0; i < bici.length; i++){
-    let biciCiclate = bici[i];
-    console.log(biciCiclate.peso);
-    if (biciCiclate.peso < 10){
-        biciLeggere.push(biciCiclate.nome + " ");
-    }
-};
-/* const {nomeOne} = biciLeggere;
-console.log(nomeOne); */
+let biciLeggera = bici[0];
 
-/* const {nome} = biciLeggere;
-console.log(nome); */
-console.log(`le bici leggere sono  ${biciLeggere}`);
-document.getElementById('bici').innerHTML = "le bici leggere sono "  + biciLeggere;
+for (let i = 0; i < bici.length; i++){
+    const bicycle = bici[i];
+    // bici col peso minore
+    if (bicycle.peso < biciLeggera.peso){
+        biciLeggera = bicycle
+    }
+}
+console.log(biciLeggera);
+const {nome, peso} = biciLeggera;
+
+const markup = `
+<ul>
+    <li>Nome: ${nome}</li>
+    <li>Peso: ${peso}</li>
+</ul>
+`;
+
+//Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
+
+document.querySelector('#bici').insertAdjacentHTML('beforeend', markup)
