@@ -28,32 +28,28 @@ function getRandomNUmber(min, max){
     return Math.ceil(Math.random() * (max - min)) + min;   
 };
 getRandomNUmber(1, 100)
-console.log(parseInt(getRandomNUmber(1, 100)));
+/* console.log(parseInt(getRandomNUmber(1, 100))); */
 
 let questaSquadra;
 for (let i = 0; i < squadre.length; i++){
     questaSquadra = squadre[i];
     
     if (questaSquadra.falliSubiti == 0){
-        getRandomNUmber(1, 100)
+        getRandomNUmber(1, 100);
     }
-    const puntiSquadra = {nome, falliSubiti} = questaSquadra;
-    console.log(puntiSquadra);
+    /* const puntiSquadra = {nome, falliSubiti} = questaSquadra; */
+   
     questaSquadra.falliSubiti = getRandomNUmber(1, 100);
-    console.log(questaSquadra.falliSubiti);
-}
+    
+    console.log(questaSquadra);
+};
 
-
-/* 
-  */
-
-/* let falli = squadre.falliSubiti;
-let punti = squadre.punti;
-console.log(falli + punti); */
-/* console.log(squadre.number); */
-//Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
-
-
-
-
+const {nome, falliSubiti} = questaSquadra;
+const markup = `
+<ul>
+    <li>Nome: ${nome}</li>
+    <li>Falli subiti: ${falliSubiti}</li>
+</ul>
+`
+document.querySelector('#squadre').insertAdjacentHTML('beforeend', markup)
 
